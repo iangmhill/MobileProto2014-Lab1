@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+
+    <LinearLayout
+        android:id="@+id/main_input_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/black"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/main_chat_input"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="fill_parent"
+            android:scrollHorizontally="false"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:hint="@string/text_box_hint"
+            android:fontFamily="sans-serif-light"/>
+
+        <Button
+            android:id="@+id/main_chat_button"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:text="@string/input_button_text"
+            android:textSize="20dp"
+            android:layout_margin = "0dp"
+            android:padding="0dp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/my_list_view"
+        android:layout_above="@id/main_input_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true" />
+
+</RelativeLayout>
